@@ -35,8 +35,19 @@ jobs:
         
       # run tests!
       - run: yarn test
-
-
-
-
+deploy:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/repo
+      - run:
+          name: Set registry URL
+          command: npm set registry http://registry.npmjs.org
+      - run:
+          name: Authenticate with registry
+          command: echo "http://registry.npmjs.org/solo474/redux-fns/npm/:_authToken=$npm_TOKEN" > ~/repo/.npmrc
+      - run:
+          name: Publish package
+          command: npm publish
+          
       
