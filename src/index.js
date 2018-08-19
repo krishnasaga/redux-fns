@@ -1,1 +1,1 @@
-export from { createRecordsReducer, selectRecords } from './records';
+export { createRecordsReducer, selectRecords } from './records';
