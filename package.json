@@ -8,7 +8,8 @@
   "devDependencies":{
     "jest": "latest",
     "babel": "^6.0.0",
-    "babel-preset-env": "latest"
+    "babel-preset-env": "latest",
+    "transform-object-rest-spread": "latest"
   },
   "scripts": {
     "test": "jest"
