@@ -89,3 +89,18 @@ export const loadable = namespace => reducer => {
     };
   };
 };
+
+export const selectRecords = (state, ids) => {
+  if (!ids) return Object.values(state.records); //select all records
+  if (typeof ids === "string" || typeof ids === "number") {
+    //select a single record
+    return state.records[ids];
+  }
+  if (Array.isArray(ids)) {
+    //select multiple records
+    return Object.values(state.records).filter(record =>
+      ids.includes(record.id)
+    );
+  }
+  return [];
+};
