@@ -1,4 +1,4 @@
-import { createRecordsReducer, __toRecords } from "./";
+import { createRecordsReducer, __toRecords } from "./records";
 
 describe("Records reducer", () => {
   describe("Adding records", () => {
