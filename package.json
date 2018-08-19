@@ -9,7 +9,7 @@
     "jest": "latest",
     "babel": "^6.0.0",
     "babel-preset-env": "latest",
-    "transform-object-rest-spread": "latest"
+    "babel-plugin-transform-object-rest-spread": "latest"
   },
   "scripts": {
     "test": "jest"
