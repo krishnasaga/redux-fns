@@ -63,7 +63,7 @@ workflows:
   test_and_deploye:
     jobs:
       - test
-      - deploy
-         requires:
-           - test
+      - deploy:
+          requires:
+            - test2
       
