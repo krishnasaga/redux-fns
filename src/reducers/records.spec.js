@@ -97,3 +97,29 @@ describe("Records reducer", () => {
     });
   });
 });
+
+
+describe("Records selctor", () => {
+  it("can select all records", () => {
+    expect(selectRecords(__toRecords([{ id: 1 }, { id: 2 }]))).toEqual([
+      { id: 1 },
+      { id: 2 }
+    ]);
+  });
+  it("can select multiple records", () => {
+    expect(
+      selectRecords(__toRecords([{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }]), [
+        2,
+        4
+      ])
+    ).toEqual([{ id: 2 }, { id: 4 }]);
+  });
+  it("can select multiple records", () => {
+    expect(
+      selectRecords(
+        __toRecords([{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }]),
+        2
+      )
+    ).toEqual({ id: 2 });
+  });
+});
