@@ -1,2 +1,2 @@
-export { createRecordsReducer, selectRecords } from './records';
-export { loading } from './loading';
+export { createRecordsReducer, selectRecords } from './reducers/records';
+export { loading } from './enhancers/loading';
