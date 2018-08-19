@@ -3,13 +3,5 @@
     ["env", { 
       "targets": { "node": "current" },
     }],
-  ],
-  "overrides": [{
-    "test": "./client",
-    "presets": [
-      ["env", { 
-        "targets": { "browsers": ["last 2 versions"] },
-      }],
-    ],
-  }],
+  ]
 }
