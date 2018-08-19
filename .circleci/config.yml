@@ -63,5 +63,5 @@ workflows:
   test_and_deploye:
     jobs:
       - test
-      - deploye
+      - deploy
       
