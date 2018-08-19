@@ -65,5 +65,5 @@ workflows:
       - test
       - deploy:
           requires:
-            - test2
+            - test
       
