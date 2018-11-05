@@ -1,4 +1,4 @@
-export const __toRecords = (__records = []) => {
+export const __toSet = (__records = []) => {
   if (!Array.isArray(__records))
     return {
       records: {},
@@ -14,9 +14,9 @@ export const __toRecords = (__records = []) => {
   };
 };
 
-export const __updateAllRecords = (state, action) => __toRecords(action.data);
+export const __updateAllRecords = (state, action) => __toSet(action.data);
 
-export const __updateRecords = (state, action) => {
+export const __updateSet = (state, action) => {
   if (!action.data || !state.records[action.data.id]) {
     return state;
   }
@@ -40,8 +40,8 @@ export const __addRecords = (state, action) => {
     };
   }
   return {
-    records: { ...state.records, ...__toRecords(action.data).records },
-    ids: [...state.ids, ...__toRecords(action.data).ids]
+    records: { ...state.records, ...__toSet(action.data).records },
+    ids: [...state.ids, ...__toSet(action.data).ids]
   };
 };
 
@@ -55,7 +55,7 @@ export const __removeRecords = (state, action) => {
     };
   }
   return {
-    records: { ...state.records, ...__toRecords(action.data) },
+    records: { ...state.records, ...__toSet(action.data) },
     ids: state.ids
   };
 };
@@ -71,7 +71,7 @@ export const createRecordsReducer = ({ namespace }) => {
     if (new RegExp(`${namespace}/CHANGED`).test(action.type)) {
       return __updateAllRecords(state, action);
     } else if (new RegExp(`${namespace}/UPDATED`).test(action.type)) {
-      return __updateRecords(state, action);
+      return __updateSet(state, action);
     } else if (new RegExp(`${namespace}/ADDED`).test(action.type)) {
       return __addRecords(state, action);
     } else if (new RegExp(`${namespace}/REMOVED`).test(action.type)) {
