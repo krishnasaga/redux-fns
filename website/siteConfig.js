@@ -22,7 +22,7 @@ const users = [
 
 const siteConfig = {
   title: 'Redux fns', // Title for your website.
-  tagline: 'Reducers',
+  tagline: 'Reducer creators, enhancers, action creators and selectors for redux',
   url: 'https://solo474.github.io/redux-fns/', // Your website URL
   baseUrl: '/redux-fns/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
@@ -30,8 +30,8 @@ const siteConfig = {
   //   baseUrl: '/test-site/',
 
   // Used for publishing and more
-  projectName: 'test-site',
-  organizationName: 'facebook',
+  projectName: 'redux-fns',
+  organizationName: 'P3G',
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
   //   organizationName: 'JoelMarcey'
