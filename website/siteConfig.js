@@ -24,7 +24,7 @@ const siteConfig = {
   title: 'Redux fns', // Title for your website.
   tagline: 'Reducer creators, enhancers, action creators and selectors for redux',
   url: 'https://solo474.github.io/redux-fns/', // Your website URL
-  baseUrl: '/redux-fns/', // Base URL for your project */
+  baseUrl: '/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
