@@ -145,16 +145,16 @@ class Index extends React.Component {
       <Block layout="fourColumn">
         {[
           {
-            content: 'This is the content of my feature',
+            content: 'No dependencies used like loadash or underscore. complete from scratch',
             image: `${baseUrl}img/docusaurus.svg`,
             imageAlign: 'top',
-            title: 'Feature One',
+            title: 'No dependencies',
           },
           {
-            content: 'The content of my second feature',
+            content: 'Simple',
             image: `${baseUrl}img/docusaurus.svg`,
             imageAlign: 'top',
-            title: 'Feature Two',
+            title: 'Simple and Powerful',
           },
         ]}
       </Block>
