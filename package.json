@@ -1,8 +1,10 @@
 {
   "name": "redux-fns",
-  "version": "1.2.0",
+  "version": "1.4.1",
   "description": "reducer creators, enhancers, action creators and selectors for redux",
   "keywords": ["redux","functional programming"],
+  "author": "Sagar",
+  "main": "src/index.js",
   "dependencies": {
   },
   "devDependencies":{
