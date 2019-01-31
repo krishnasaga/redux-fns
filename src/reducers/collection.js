@@ -27,7 +27,8 @@ export const createCollectionReducer = ({
     initialCollection = [],
     updateWhen = () => false,
     addWhen = () => false,
-    removeWhen = () => false
+    removeWhen = () => false,
+    enhancers: []
 }) => {
   return (state = {
       collection: toCollection(initialCollection)
